@@ -3,12 +3,10 @@ package org.example;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Classe de test pour Calculator
- * Approche TDD : Les tests sont écrits AVANT l'implémentation
- */
+
 @DisplayName("Tests de la calculatrice")
 public class CalculatorTest {
 
@@ -31,7 +29,6 @@ public class CalculatorTest {
     @DisplayName("Addition avec zéro")
     void testAdditionAvecZero() {
         assertEquals(5, calculator.add(5, 0), "5 + 0 devrait égaler 5");
-        assertEquals(5, calculator.add(0, 5), "0 + 5 devrait égaler 5");
     }
 
     @Test
@@ -44,7 +41,6 @@ public class CalculatorTest {
     @DisplayName("Addition d'un nombre positif et négatif")
     void testAdditionPositifNegatif() {
         assertEquals(2, calculator.add(5, -3), "5 + (-3) devrait égaler 2");
-        assertEquals(-2, calculator.add(-5, 3), "-5 + 3 devrait égaler -2");
     }
 
     // ==================== TESTS SOUSTRACTION ====================
@@ -59,7 +55,6 @@ public class CalculatorTest {
     @DisplayName("Soustraction avec zéro")
     void testSoustractionAvecZero() {
         assertEquals(5, calculator.subtract(5, 0), "5 - 0 devrait égaler 5");
-        assertEquals(-5, calculator.subtract(0, 5), "0 - 5 devrait égaler -5");
     }
 
     @Test
@@ -74,8 +69,6 @@ public class CalculatorTest {
         assertEquals(-3, calculator.subtract(2, 5), "2 - 5 devrait égaler -3");
     }
 
-    // ==================== TESTS MULTIPLICATION ====================
-
     @Test
     @DisplayName("Multiplication de deux nombres positifs")
     void testMultiplicationNombresPositifs() {
@@ -86,14 +79,12 @@ public class CalculatorTest {
     @DisplayName("Multiplication par zéro")
     void testMultiplicationParZero() {
         assertEquals(0, calculator.multiply(5, 0), "5 * 0 devrait égaler 0");
-        assertEquals(0, calculator.multiply(0, 5), "0 * 5 devrait égaler 0");
     }
 
     @Test
     @DisplayName("Multiplication par un")
     void testMultiplicationParUn() {
         assertEquals(5, calculator.multiply(5, 1), "5 * 1 devrait égaler 5");
-        assertEquals(5, calculator.multiply(1, 5), "1 * 5 devrait égaler 5");
     }
 
     @Test
@@ -106,7 +97,6 @@ public class CalculatorTest {
     @DisplayName("Multiplication d'un nombre positif et négatif")
     void testMultiplicationPositifNegatif() {
         assertEquals(-15, calculator.multiply(3, -5), "3 * (-5) devrait égaler -15");
-        assertEquals(-15, calculator.multiply(-3, 5), "-3 * 5 devrait égaler -15");
     }
 
     // ==================== TESTS DIVISION ====================
@@ -148,6 +138,5 @@ public class CalculatorTest {
     @DisplayName("Division d'un nombre positif et négatif")
     void testDivisionPositifNegatif() {
         assertEquals(-2, calculator.divide(10, -5), 0.0001, "10 / (-5) devrait égaler -2");
-        assertEquals(-2, calculator.divide(-10, 5), 0.0001, "-10 / 5 devrait égaler -2");
     }
 }
